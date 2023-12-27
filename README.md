@@ -11,6 +11,17 @@ The below command will start the installation with the provieded configuration.
 ```pwsh
 .\setup.exe /configure .\OfflineOfficeLTSC.xml
 ```
+### One liner
+Copy and paste this whole command into powershell.
+```powershell
+Invoke-WebRequest -Uri "https://officecdn.microsoft.com/pr/wsus/setup.exe" -OutFile "$env:TEMP\Office-Deployment-Tool.exe";
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tadghh/office-ltsc/main/OfflineOfficeLTSC.xml" -OutFile "$env:TEMP\OfflineOfficeLTSC.xml";
+Set-Location $env:TEMP;
+.\Office-Deployment-Tool.exe /configure .\OfflineOfficeLTSC.xml;
+Remove-Item ("$env:TEMP\Office-Deployment-Tool.exe"),("$env:TEMP\OfflineOfficeLTSC.xml") -Force;
+
+```
+
 ## Info
 - Version: Office LTSC Professional Plus 2021 - VL
 - Language: English (United States)
