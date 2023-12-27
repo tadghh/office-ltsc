@@ -1,5 +1,5 @@
 # Office LTSC
-A configuration file to be used with [Office Deployment tool](https://officecdn.microsoft.com/pr/wsus/setup.exe)
+A configuration file to be used with [Office Deployment Tool](https://officecdn.microsoft.com/pr/wsus/setup.exe)
 
 New configurations can be created with [Office Customization Tool](https://config.office.com/deploymentsettings)
 
@@ -11,9 +11,6 @@ The below command will start the installation with the provieded configuration.
 ```pwsh
 .\setup.exe /configure .\OfflineOfficeLTSC.xml
 ```
-
- 
-
 ## Info
 - Version: Office LTSC Professional Plus 2021 - VL
 - Language: English (United States)
@@ -28,7 +25,6 @@ The below command will start the installation with the provieded configuration.
   - Word
   - Excel
   - PowerPoint
-  
 ## Changes
 - Removed
 	- Access
